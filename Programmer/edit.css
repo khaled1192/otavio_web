@@ -97,21 +97,21 @@ p {
 
     .development-container {
         padding: 20px;
-        max-width: 95%;
+        max-width: 90%;  /* زيادة المساحة المتاحة */
     }
 
     .development-image {
-        width: 70%; /* تقليل حجم الصورة قليلاً لتناسب الشاشات الصغيرة */
+        width: 60%; /* تقليل حجم الصورة لتناسب الشاشات الصغيرة */
         margin-bottom: 20px;
     }
 
     h1 {
-        font-size: 2.5rem;  /* تقليل حجم النص */
+        font-size: 2.2rem;  /* تقليل حجم النصوص ليكون مناسباً */
     }
 
     p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
     }
 
     .developer-name {
