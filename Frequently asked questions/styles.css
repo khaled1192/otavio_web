@@ -1,0 +1,191 @@
+/* إعدادات أساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* رأس الصفحة */
+header {
+    background-color: #3eabeb;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* قسم الأسئلة المتداولة */
+.faq-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #415772;
+    color: white;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #005bb5;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 0 0 8px 8px;
+}
+
+.faq-answer p {
+    font-size: 1.1rem;
+}
+
+/* التذييل */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* الاستجابة للهواتف المحمولة */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .gallery {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stats div {
+        margin: 20px 0;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        padding: 12px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    #backToTop {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .social-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        max-width: 90%;
+    }
+
+    .stats h3 {
+        font-size: 2rem;
+    }
+
+    .counters .counter {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 8px 18px;
+        font-size: 1rem;
+    }
+
+    .social-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+}
+
+/* زر الرجوع */
+.back-button {
+    display: inline-block;
+    background-color: #0984e3;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    margin-top: 30px;
+}

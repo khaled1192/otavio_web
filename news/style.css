@@ -1,0 +1,268 @@
+/* إعدادات أساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* استخدام خط عصري */
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #444;
+    line-height: 1.6;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* رأس الصفحة */
+header {
+    background-color: #1e2a6e;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/* قسم الأخبار */
+.news {
+    width: 80%;
+    max-width: 1200px;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.news h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.news-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news-item {
+    background-color: white;
+    width: 100%;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.news-item h3 {
+    font-size: 1.5rem;
+    color: #0072ff;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+/* قسم التعليقات الذكية */
+.ai-comments {
+    width: 80%;
+    max-width: 800px;
+    padding: 50px 20px;
+    background-color: #e9f1ff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+#ai-input {
+    width: 70%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+    outline: none;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+#ai-input:focus {
+    border-color: #0072ff;
+}
+
+#ai-button {
+    padding: 12px 30px;
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#ai-button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+#ai-response {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* تذييل الصفحة */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 1rem;
+}
+
+/* زر الرجوع */
+.back-button {
+    display: inline-block;
+    background-color: #0984e3;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.back-button:hover {
+    background-color: #74b9ff;
+    transform: scale(1.05);
+}
+
+.back-button:active {
+    background-color: #0984e3;
+    transform: scale(0.95);
+}
+
+/* الاستجابة للهواتف المحمولة */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .gallery {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stats div {
+        margin: 20px 0;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        padding: 12px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    #backToTop {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .social-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        max-width: 90%;
+    }
+
+    .stats h3 {
+        font-size: 2rem;
+    }
+
+    .counters .counter {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 8px 18px;
+        font-size: 1rem;
+    }
+
+    .social-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+}

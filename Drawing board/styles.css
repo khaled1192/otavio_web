@@ -1,0 +1,173 @@
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#drawingCanvas {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 880px;
+    max-width: 100%;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.controls label {
+    margin: 0 10px;
+}
+
+.controls input[type="color"], .controls input[type="range"], .controls select {
+    cursor: pointer;
+    border: none;
+    height: 30px;
+    margin: 10px;
+}
+
+button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #00509e;
+    transform: scale(1.1);
+}
+
+canvas {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+}
+
+/* زر الرجوع */
+.back-button {
+    display: inline-block;
+    background-color: #0984e3;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    margin-top: 30px;
+}
+/* الاستجابة للهواتف المحمولة */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .gallery {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stats div {
+        margin: 20px 0;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        padding: 12px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    #backToTop {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .social-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        max-width: 90%;
+    }
+
+    .stats h3 {
+        font-size: 2rem;
+    }
+
+    .counters .counter {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 8px 18px;
+        font-size: 1rem;
+    }
+
+    .social-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+}

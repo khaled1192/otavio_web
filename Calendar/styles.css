@@ -1,0 +1,278 @@
+/* إعدادات أساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f2f6;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 50px;
+}
+
+/* حاوية التقويم */
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* الرأس */
+header {
+    background-color: #0072ff;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+/* جدول المباريات */
+.schedule {
+    margin-bottom: 60px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.schedule h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #444;
+}
+
+th {
+    background-color: #0072ff;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #d9eaf7;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* الأنشطة اليومية */
+.daily-activities {
+    margin-top: 60px;
+    background-color: #e9f1ff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.daily-activities h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.daily-activities ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.daily-activities li {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #444;
+}
+
+.daily-activities li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.daily-activities li:before {
+    content: '• ';
+    color: #0072ff;
+    font-weight: bold;
+}
+
+/* التذييل */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #0072ff;
+    text-decoration: underline;
+}
+
+/* الاستجابة للهواتف المحمولة */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .gallery {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stats div {
+        margin: 20px 0;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        padding: 12px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    #backToTop {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .social-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        max-width: 90%;
+    }
+
+    .stats h3 {
+        font-size: 2rem;
+    }
+
+    .counters .counter {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 8px 18px;
+        font-size: 1rem;
+    }
+
+    .social-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+}
+
+/* زر الرجوع */
+.back-button {
+    display: inline-block;
+    background-color: #0984e3;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    margin-top: 30px;
+}

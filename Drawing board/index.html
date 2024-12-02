@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ارسم أو اكتب رسالة لي اوتافيو</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+    <section id="drawingCanvas" class="section">
+        <div class="container">
+            <h2>ارسم أو اكتب رسالة لي اوتافيو</h2>
+            
+            <!-- أدوات التحكم -->
+            <div class="controls">
+                <label for="brushColor">لون الفرشاة:</label>
+                <input type="color" id="brushColor" value="#1e90ff">
+                
+                <label for="brushSize">حجم الفرشاة:</label>
+                <input type="range" id="brushSize" min="1" max="10" value="3">
+                
+                <label for="toolSelect">اختيار الأداة:</label>
+                <select id="toolSelect">
+                    <option value="pen">قلم</option>
+                    <option value="rectangle">مستطيل</option>
+                    <option value="circle">دائرة</option>
+                    <option value="text">نص</option>
+                </select>
+
+                <label for="textColor">لون النص:</label>
+                <input type="color" id="textColor" value="#000000">
+
+                <button id="clearCanvas">مسح اللوحة</button>
+                <button id="saveCanvas">حفظ الصورة</button>
+            </div>
+            <a href="../index.html" class="back-button">الرجوع إلى الصفحة الرئيسية</a>
+            <!-- لوح الرسم -->
+            <canvas id="canvas" width="800" height="500"></canvas>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+/* إعادة تعيين الأنماط الأساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* إعدادات الخطوط والألوان */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #f8f9fa, #dee2e6);
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* الحاوية الأساسية */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* الهيدر */
+header {
+    background: linear-gradient(90deg, #591263, #458fe9); /* تدرج اللون */
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* إضافة لمنع التجاوزات */
+    transition: background 0.3s ease; /* إضافة تأثيرات للانتقال عند التمرير */
+}
+
+header:hover {
+    background: linear-gradient(90deg, #591263, #458fe9); /* تغيير التدرج عند التمرير */
+}
+
+header h1 {
+    font-size: 4rem; /* زيادة حجم الخط */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* إضافة تأثير الظل للنص */
+}
+
+/* قائمة الهيدر */
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-top: 30px; /* زيادة المسافة بين العناصر */
+}
+
+header nav ul li {
+    margin: 15px 0;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem; /* زيادة الحجم */
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+header nav ul li a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: #ffdd57;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(0%);
+}
+
+header nav ul li a:hover {
+    color: #ffdd57;
+    transform: translateY(-5px);
+}
+
+header nav ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+/* تأثيرات عند التمرير */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* الأقسام */
+.section {
+    padding: 50px 0;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #444;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #ffcc00;
+    margin: 10px auto 0;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+ul li i {
+    color: #ffcc00;
+    margin-right: 10px;
+}
+
+/* النموذج */
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: left;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #ffcc00;
+    color: #333;
+    cursor: pointer;
+}
+
+/* الفوتر */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* تأثيرات عند التمرير */
+.section:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* الاستجابة للهواتف المحمولة */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .gallery {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stats div {
+        margin: 20px 0;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        padding: 12px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    #backToTop {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .social-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        max-width: 90%;
+    }
+
+    .stats h3 {
+        font-size: 2rem;
+    }
+
+    .counters .counter {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 8px 18px;
+        font-size: 1rem;
+    }
+
+    .social-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* زر الوضع الداكن */
+.dark-mode-toggle {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background: #333;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dark-mode-toggle:hover {
+    background: #ffdd57;
+    border-color: #ffdd57;
+    color: #333;
+    transform: scale(1.1);
+}
+
+.dark-mode-toggle:focus {
+    outline: none;
+}
+
+/* أيقونة القمر باستخدام CSS */
+.dark-mode-toggle .moon-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+}
+
+.dark-mode-toggle .moon-icon::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+/* عند التفعيل لوضع الداكن */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f6f9;
+}
+
+body.dark-mode header {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+}
+
+body.dark-mode .dark-mode-toggle {
+    background: #fff;
+    color: #333;
+    border: 2px solid #333;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background: #ffdd57;
+    border-color: #ffdd57;
+    color: #333;
+}
+
+body.dark-mode .section {
+    background: #1f232b;
+}
+
+/* قسم المعرض */
+#gallery {
+    padding: 50px 0;
+    background-color: #f4f6f9;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* تصميم متجاوب */
+    gap: 20px;
+    justify-items: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* استجابة الجوال */
+@media (max-width: 768px) {
+    #gallery h2 {
+        font-size: 2rem;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+}

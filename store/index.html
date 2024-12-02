@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر أوتافيو</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <h1>متجر أوتافيو</h1>
+            <nav>
+                <a href="../index.html">الرئيسية</a>
+                <a href="#shop">التسوق</a>
+                <a href="#cart" class="cart-link">السلة (<span id="cart-count">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="shop" class="shop">
+        <div class="container">
+            <h2>منتجات أوتافيو</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="../img/o.webp" alt="قميص أوتافيو" class="product-img">
+                    <h3>قميص أوتافيو</h3>
+                    <p>قميص رسمي موقّع من أوتافيو. مصنوع من أفضل المواد.</p>
+                    <span>200 ريال سعودي</span>
+                    <button class="add-to-cart" data-name="قميص أوتافيو" data-price="200">إضافة إلى السلة</button>
+                </div>
+
+                <div class="product-item">
+                    <img src="../img/bag.jpg" alt="حقيبة أوتافيو" class="product-img">
+                    <h3>حقيبة أوتافيو</h3>
+                    <p>حقيبة رياضية مميزة مع توقيع أوتافيو.</p>
+                    <span>150 ريال سعودي</span>
+                    <button class="add-to-cart" data-name="حقيبة أوتافيو" data-price="150">إضافة إلى السلة</button>
+                </div>
+
+                <div class="product-item">
+                    <img src="../img/m.jfif" alt="ملصق أوتافيو" class="product-img">
+                    <h3>ملصق أوتافيو</h3>
+                    <p>ملصق مميز يحمل توقيع أوتافيو.</p>
+                    <span>30 ريال سعودي</span>
+                    <button class="add-to-cart" data-name="ملصق أوتافيو" data-price="30">إضافة إلى السلة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart" class="cart">
+        <div class="container">
+            <h2>سلة المشتريات</h2>
+            <div id="cart-items">
+                <p>لا توجد منتجات في السلة بعد.</p>
+            </div>
+            <div id="cart-total">
+                <p>إجمالي: <span id="total-price">0</span> ريال سعودي</p>
+            </div>
+            <button id="checkout-button">إتمام الشراء</button>
+        </div>
+    </section>
+
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

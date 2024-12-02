@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tajawal', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #00bcd4, #3f51b5);
+    color: #fff;
+    overflow: hidden;
+}
+
+.development-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.development-image {
+    width: 300px;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 50%; /* أقواس دائرية كاملة */
+    border: 12px solid #ffd700; /* إطار ذهبي فاخر */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); /* ظل كثيف يعطي تأثير الفخامة */
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.development-image:hover {
+    transform: scale(1.1); /* تكبير الصورة عند التحويم */
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7); /* زيادة الظلال مع التحويم */
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 15px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f7f7f7;
+    text-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    color: #dfe3e8;
+}
+
+.developer-name {
+    font-weight: 600;
+    color: #ffd700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.home-button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.4rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+}
+
+.home-button:hover {
+    background-color: #e91e63;
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(255, 64, 129, 0.6);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* استجابة الهواتف */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
+/* استجابة الهواتف */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+}

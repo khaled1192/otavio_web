@@ -1,0 +1,266 @@
+/* إعدادات عامة */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    background: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+}
+
+/* الحاوية */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    max-width: 1200px;
+}
+
+/* الرأس */
+header {
+    background: linear-gradient(145deg, #3b9fff, #1e70ff);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+header nav ul {
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+header nav ul li {
+    margin: 0;
+}
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+header nav ul li a:hover {
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+
+/* الأقسام */
+.section {
+    padding: 60px 20px;
+    background: #ffffff;
+    margin: 40px 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+.section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #1e70ff;
+    padding-bottom: 10px;
+}
+.section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #666;
+}
+.section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+.section ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #555;
+}
+.section ul li strong {
+    color: #1e70ff;
+}
+
+/* الفوتر */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    font-size: 1rem;
+    border-top: 5px solid #1e70ff;
+}
+footer p {
+    margin: 0;
+}
+
+/* أزرار التفاعل */
+button, a.button {
+    background: #1e70ff;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover, a.button:hover {
+    background: #ff6f61;
+    transform: scale(1.05);
+}
+
+/* تنقل بين الأقسام */
+header nav ul li a.active {
+    color: #ff6f61;
+    font-weight: 700;
+    border-bottom: 2px solid #ff6f61;
+    padding-bottom: 5px;
+}
+
+/* الصور */
+img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* تأثيرات التمرير */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* استجابة الهواتف */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+}
+/* الاستجابة للهواتف المحمولة */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .gallery {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stats div {
+        margin: 20px 0;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        padding: 12px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    #backToTop {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .social-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        max-width: 90%;
+    }
+
+    .stats h3 {
+        font-size: 2rem;
+    }
+
+    .counters .counter {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 8px 18px;
+        font-size: 1rem;
+    }
+
+    .social-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+}

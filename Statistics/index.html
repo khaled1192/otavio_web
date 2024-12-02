@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إحصائيات أوتافيو</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- الرأس -->
+    <header>
+        <div class="container">
+            <h1>إحصائيات اللاعب: أوتافيو</h1>
+            <a href="../index.html" class="back-button">الرجوع إلى الصفحة الرئيسية</a>
+        </div>
+    </header>
+
+    <!-- الإحصائيات التفصيلية -->
+    <section id="stats" class="section">
+        <div class="container">
+            <h2>الإحصائيات المميزة</h2>
+            <div class="stats-card">
+                <div class="stat-item">
+                    <h3>عدد المباريات</h3>
+                    <p>350 مباراة</p>
+                </div>
+                <div class="stat-item">
+                    <h3>الأهداف</h3>
+                    <p>55 هدفًا</p>
+                </div>
+                <div class="stat-item">
+                    <h3>التمريرات الحاسمة</h3>
+                    <p>90 تمريرة حاسمة</p>
+                </div>
+                <div class="stat-item">
+                    <h3>البطولات</h3>
+                    <p>12 بطولة</p>
+                </div>
+            </div>
+
+            <!-- الرسم البياني التفاعلي -->
+            <div class="chart-container">
+                <canvas id="statsChart"></canvas>
+            </div>
+
+            <h3>أبرز الألقاب</h3>
+            <ul>
+                <li>الدوري البرتغالي</li>
+                <li>كأس الملك سلمان للأندية</li>
+                <li>دوري أبطال أوروبا</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <p>zero</p>
+        </div>
+    </footer>
+
+    <!-- تضمين JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('statsChart').getContext('2d');
+        const statsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['المباريات', 'الأهداف', 'التمريرات', 'البطولات'],
+                datasets: [{
+                    label: 'إحصائيات أوتافيو',
+                    data: [350, 55, 90, 12],
+                    backgroundColor: '#0984e3',
+                    borderColor: '#0984e3',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Quiz.css">
+    <title>اختبار اوتافيو</title>
+</head>
+<body>
+    <section id="quiz" class="section">
+        <div class="container">
+            <h2>اختبر معلوماتك عن اوتافيو</h2>
+            <form id="quizForm">
+                <div class="question">
+                    <label>ما هو طموح اوتافيو؟</label>
+                    <select name="q1">
+                        <option value="" disabled selected>اختر الإجابة</option>
+                        <option value="wrong">1995 فبراير 8</option>
+                        <option value="correct">1995 9 فبراير</option>
+                        <option value="wrong">1995 9 يناير</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>اين ولد اوتافيو</label>
+                    <select name="q2">
+                        <option value="" disabled selected>اختر الإجابة</option>
+                        <option value="correct">البرازيل</option>
+                        <option value="wrong">البرتغال</option>
+                        <option value="wrong">اسبانيا</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>أين يعيش اوتافيو؟</label>
+                    <select name="q3">
+                        <option value="" disabled selected>اختر الإجابة</option>
+                        <option value="correct">الرياض</option>
+                        <option value="wrong">الخبر</option>
+                        <option value="wrong">جواو بيسوا</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>ما هو اسلوب لعب اوتافيو؟</label>
+                    <select name="q4">
+                        <option value="" disabled selected>اختر الإجابة</option>
+                        <option value="wrong">اللعب الجماعي ولكن دون جهد يُذكر</option>
+                        <option value="wrong">الأنانية والمهارات الفردية</option>
+                        <option value="correct">اللعب بالمهارات الفردية والخروج من الضغط</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>ماهي جنسية اوتافيو</label>
+                    <select name="q5">
+                        <option value="" disabled selected>اختر الإجابة</option>
+                        <option value="correct">برتغالي</option>
+                        <option value="wrong">برازيلي</option>
+                        <option value="wrong">اسكتلندي</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>ماهو طول اوتافيو</label>
+                    <select name="q6">
+                        <option value="" disabled selected>اختر الإجابة</option>
+                        <option value="wrong">1.69</option>
+                        <option value="correct">1.72</option>
+                        <option value="wrong">1.68</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>كم عدد المباريات التي لعبها اوتافيو مع منتخب بلاده</label>
+                    <select name="q7">
+                        <option value="" disabled selected>اختر الإجابة</option>
+                        <option value="wrong">19</option>
+                        <option value="wrong">32</option>
+                        <option value="correct">22</option>
+                        <option value="wrong">28</option>
+                    </select>
+                </div>
+
+                <button type="button" id="submitQuiz">إرسال</button>
+                <p id="quizResult"></p>
+            </form>
+        </div>
+    </section>
+
+    <button class="home-button" onclick="goHome()">العودة إلى الصفحة الرئيسية</button>
+
+    <script>
+        function goHome() {
+            window.location.href = "../index.html";
+        }
+    </script>
+
+    <script src="Quiz.js"></script>
+</body>
+</html>
