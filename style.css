@@ -23,92 +23,48 @@ body {
 }
 
 /* الهيدر */
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* الهيدر */
 header {
-    background: linear-gradient(90deg, #591263, #458fe9); /* تدرج اللون */
+    background: linear-gradient(90deg, #4caf50, #2196f3);
     color: #fff;
-    padding: 80px 0;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    position: relative;
-    z-index: 10;
+    padding: 10px 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    overflow: hidden; /* إضافة لمنع التجاوزات */
-    transition: background 0.3s ease; /* إضافة تأثيرات للانتقال عند التمرير */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header:hover {
-    background: linear-gradient(90deg, #591263, #458fe9); /* تغيير التدرج عند التمرير */
-}
-
-header h1 {
-    font-size: 4rem; /* زيادة حجم الخط */
+.logo {
+    font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 5px;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* إضافة تأثير الظل للنص */
 }
 
-/* قائمة الهيدر */
-header nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin-top: 30px; /* زيادة المسافة بين العناصر */
-}
-
-header nav ul li {
-    margin: 15px 0;
-    position: relative;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.4rem; /* زيادة الحجم */
-    font-weight: 600;
-    letter-spacing: 2px;
-    transition: color 0.3s ease, transform 0.3s ease;
-    position: relative;
-}
-
-header nav ul li a::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    width: 0;
-    height: 3px;
-    background: #ffdd57;
-    transition: width 0.3s ease, left 0.3s ease;
-    transform: translateX(0%);
-}
-
-header nav ul li a:hover {
-    color: #ffdd57;
-    transform: translateY(-5px);
-}
-
-header nav ul li a:hover::before {
-    width: 100%;
-    left: 0;
-}
-/* الزر (Hamburger) */
+/* زر Hamburger */
 .hamburger {
     display: none;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
     cursor: pointer;
-    width: 30px;
-    height: 25px;
-    gap: 5px;
 }
 
 .hamburger span {
@@ -118,24 +74,54 @@ header nav ul li a:hover::before {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* القائمة القابلة للتوسع */
-.menu {
+/* قائمة التنقل */
+nav ul {
+    list-style: none;
     display: flex;
-    gap: 10px;
-    background: transparent;
-    flex-direction: row;
+    gap: 20px;
 }
 
-.menu.open {
-    flex-direction: column;
-    gap: 15px;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
-    border-radius: 8px;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+}
+
+/* استجابة للأجهزة الصغيرة */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 8px;
+        padding: 10px 20px;
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        color: #fff;
+    }
 }
 
 
