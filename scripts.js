@@ -33,6 +33,6 @@ toggleButton.addEventListener('click', () => {
 });
 
 function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('open');
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('open');
 }
