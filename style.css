@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
 /* إعادة تعيين الأنماط الأساسية */
 * {
     margin: 0;
@@ -20,6 +22,21 @@ body {
     max-width: 1200px;
     margin: auto;
     overflow: hidden;
+}
+
+/* الهيدر */
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
 }
 
 /* الهيدر */
@@ -91,6 +108,39 @@ nav ul li a {
 nav ul li a:hover {
     color: #ffeb3b;
 }
+
+/* استجابة للأجهزة الصغيرة */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 8px;
+        padding: 10px 20px;
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        color: #fff;
+    }
+}
+
 
 /* استجابة للأجهزة الصغيرة */
 @media (max-width: 768px) {
