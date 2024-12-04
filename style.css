@@ -67,13 +67,35 @@ header {
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
+/* تأثير التكبير عند الإشارة على الشعار */
+.logo img {
+    width: 50px; /* الحجم الافتراضي */
+    height: auto;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* إضافة تأثير سلس */
 }
 
+/* عند الإشارة بالفأرة */
+.logo img:hover {
+    transform: scale(1.2); /* تكبير بنسبة 20% */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* إضافة ظل عند التكبير */
+}
+
+/* عند اللمس على الهاتف */
+.logo img:active {
+    transform: scale(1.2); /* نفس تأثير التكبير */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem; /* إذا كنت تريد كتابة نص بجانب الشعار */
+    color: #fff;
+    text-decoration: none;
+}
 /* زر Hamburger */
 .hamburger {
     display: none;
