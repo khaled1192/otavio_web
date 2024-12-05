@@ -80,8 +80,9 @@ header {
 /* عند الإشارة بالفأرة */
 .logo img:hover {
     transform: scale(1.2); /* تكبير بنسبة 20% */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* إضافة ظل عند التكبير */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 
 /* عند اللمس على الهاتف */
 .logo img:active {
@@ -112,6 +113,7 @@ header {
     background: #fff;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 
 /* قائمة التنقل */
 nav ul {
@@ -520,7 +522,6 @@ body.dark-mode .section {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* استجابة الجوال */
 @media (max-width: 768px) {
     #gallery h2 {
         font-size: 2rem;
@@ -534,3 +535,57 @@ body.dark-mode .section {
         width: 100%;
     }
 }
+
+/* تنسيق قسم الفيديو */
+#videos {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #ffcc00;
+    margin: 10px auto 0;
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* تأثيرات عند التمرير */
+.video-wrapper iframe {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-wrapper iframe:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
