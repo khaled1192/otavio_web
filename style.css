@@ -572,7 +572,7 @@ body.dark-mode .section {
     overflow: hidden;
 }
 
-/* تأثيرات عند التمرير */
+
 .video-wrapper iframe {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
