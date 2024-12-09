@@ -26,10 +26,10 @@ scrollToTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// التبديل بين الوضع الفاتح والداكن
+
 const toggleButton = document.querySelector('.dark-mode-toggle');
 toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode'); // التبديل بين الوضعين
+    document.body.classList.toggle('dark-mode'); 
 });
 
 function toggleMenu() {
